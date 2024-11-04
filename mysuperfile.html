@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO BROW</title>
+    <link rel="stylesheet" href="web.css"> <!-- Подключаем внешний файл стилей -->
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#info-detailed">Информация</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="logo">
+            <img src="imgg/logotip.png">
+        </div>
+        <div class="button-container">
+            <a href="https://forms.gle/nL8gaSAkg9HMp6ZJA" target="_blank">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <h3>Работа мастера Елены</h3>
+        <div id="imagesContainer">
+            <img src="imgg\раб4.jpg" width="200">
+            <img src="imgg\8QnQY9kyHJ8.jpg" width="200">
+            <img src="imgg\раб3.jpg" width="200">
+        </div>
+        <div>
+            <button id="loadMoreButton" onclick="showMoreImages()">Смотреть ещё...</button>
+        </div>
+    </section>
+    <script>
+        function showMoreImages() {
+            const imagesContainer = document.getElementById('imagesContainer');
+            const moreImages = `
+                <img src="imgg\\раб1.jpg" width="200">
+                <img src="imgg\\раб5.jpg" width="200">
+                <img src="imgg\\раб2.jpg" width="200">
+            `;
+            imagesContainer.insertAdjacentHTML('beforeend', moreImages);
+        }
+
+        function submitReview() {
+            const reviewInput = document.getElementById('reviewInput');
+            const reviewText = reviewInput.value.trim(); // Получаем и очищаем текст от лишних пробелов
+
+            if (reviewText) {
+                const reviewsList = document.getElementById('reviewsList');
+                
+                // Создаем новый элемент для отзыва
+                const newReview = document.createElement('div');
+                newReview.classList.add('review-item'); // Добавляем класс для стилизации
+                newReview.textContent = reviewText;
+
+                // Добавляем новый отзыв в список
+                reviewsList.appendChild(newReview);
+
+                // Очищаем поле ввода
+                reviewInput.value = '';
+            }
+        }
+    </script>
+
+    <section id="reviews">
+        <h2>Отзывы</h2>
+        <textarea id="reviewInput" placeholder="Оставьте ваш отзыв" rows="4" cols="50"></textarea>
+        <button onclick="submitReview()">Отправить</button>
+        <div class="reviews" id="reviewsList">
+            <!-- Здесь будут отображаться отзывы -->
+        </div>
+    </section>
+
+<section id="info">
+
+    <a name="info-detailed"> </a>
+    <h2>Информация</h2>
+    <div class="info-block">
+        <img src="imgg\часы.jpg" alt="Logo" class="info-logo">
+        <h3>График работы:</h3>
+        <p>Пн: Выходной<br>Вт-Пт: 9:00-18:00<br>Сб-Вс: 9:00-16:00</p>
+    </div>
+
+    <div class="info-block">
+        <img src="imgg/пазл.png" alt="Logo" class="info-logo">
+        <h3>Наша специализация:</h3>
+        <p>Брови: ламинирование, коррекция, окрашивание.<br>Ресницы: ламинирование, окрашивание.<br>Макияж: экспресс, дневной, вечерний.</p>
+    </div>
+
+    <div class="info-block">
+        <img src="imgg\телефон.jpg" alt="Logo" class="info-logo">
+        <h3>Номер телефона:</h3>
+        <p>+373-69-111-491</p>
+    </div>
+
+    <div class="info-block">
+        <img src="imgg\письмо.png" alt="Logo" class="info-logo">
+        <h3>Электронная почта:</h3>
+        <p>lkerbuneee@gmail.com</p>
+    </div>
+
+    <div class="info-block">
+        <img src="imgg\инст.png" alt="Logo" class="info-logo">
+        <h3>Страница Instagram:</h3>
+        <p><a href="https://www.instagram.com/_helen_pro_brow/" target="_blank">_helen_pro_brow</a></p>
+    </div>
+
+    <div class="info-block">
+        <img src="imgg\карта.png" alt="Logo" class="info-logo">
+        <h3>Адрес:</h3>
+        <p><a href="https://www.google.com/maps/dir/.../%D0%91%D0%B5%D0%BB%D1%8C%D1%86%D0%BA%D0%B8%D0%B9+%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9+%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82+%D0%B8%D0%BC.+%D0%90%D0%BB%D0%B5%D0%BA%D1%83+%D0%A0%D1%83%D1%81%D1%81%D0%BE,+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0,+%D0%91%D0%B5%D0%BB%D1%8C%D1%86%D1%8B/@47.7518735,27.922287,14.34z/data=!4m8!4m7!1m0!1m5!1m1!1s0x40cb672fbf9e077d:0x73a94903f24050f3!2m2!1d27.92159!2d47.7548312?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Strada Pușkin 38, Bălți</a></p>
+    </div>
+
+</body>
+</html>
