@@ -47,6 +47,10 @@
                 <img src="imgg\\раб2.jpg" width="200">
             `;
             imagesContainer.insertAdjacentHTML('beforeend', moreImages);
+
+            const loadMoreButton = document.getElementById('loadMoreButton');
+            loadMoreButton.disabled = true;
+            loadMoreButton.textContent = "disabled";
         }
 
         function submitReview() {
