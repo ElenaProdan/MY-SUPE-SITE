@@ -1,0 +1,190 @@
+/* Стили для всего сайта */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FADADD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth; /* Плавная прокрутка по ссылкам */
+}
+
+header {
+    position: fixed; /* фиксация панели */
+    top: 0;
+    width: 100%;
+    background-color: #FADADD;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для панели */
+    z-index: 1000; /* благодаря этому панель держится вверху */
+}
+
+/* делает меню красивым */
+nav {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение ссылок */
+    max-width: 800px; /* Максимальная ширина */
+    margin: 0 auto; /* Центр */
+}
+
+/* Стили для панели */
+nav a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* рубрики */
+section {
+    height: 100vh; /* 100% высоты экрана */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* внутренняя рамка */
+}
+
+.logo {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.logo img {
+    width: 400px; /* Ширина логотипа */
+}
+
+/* Кнопка "Записаться онлайн" */
+.button-container {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Стили для кнопки */
+.button-container a {
+    background-color: #F78FB3;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px; /* Закругленные углы */
+    font-size: 1.5rem;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    transition: background-color 0.3s ease; /* Плавное изменения фона */
+}
+
+/* кликабельно */
+.button-container a:hover {
+    background-color: #FF69B4;
+}
+
+#imagesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px; /* Расстояние между изображениями */
+    margin: 20px 0;
+}
+
+#imagesContainer img {
+    width: 200px; /* Размер изображения */
+    height: 200px;
+    object-fit: cover; /* Обрезаем изображения, сохраняя пропорции */
+}
+
+/* Стили для кнопки "Смотреть ещё" */
+#loadMoreButton {
+    background-color: #F78FB3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#loadMoreButton:hover {
+    background-color: #FF69B4;
+}
+#reviewsList {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item {
+    background-color: #FADADD;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;   font-family: 'Arial', sans-serif;
+    font-size: 10px;
+}
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin-top: 100px; /* Отступ сверху, чтобы не заходило на другие секции */
+    position: relative;
+}
+
+#info h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px; /* Отступ между заголовком и блоками */
+    font-family: 'Arial', sans-serif;
+    margin-top:64px;
+}
+
+/* Стили для блоков с информацией */
+.info-block {
+    width: 150%; /* Ширина блока 150% от экрана */
+    background-color: #f7ccd0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin: 5px 0; /* Отступ между блоками */
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-block {
+    display: inline-block;
+}
+
+h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px; /* Отступ между логотипом и текстом */
+}
+
+/* Стили для текста внутри блоков */
+.info-block p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Логотип в блоках */
+.info-logo {
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+}
+
+/* Стили для логотипа внутри заголовка */
+.info-block h3 img {
+    display: inline-block;
+}
